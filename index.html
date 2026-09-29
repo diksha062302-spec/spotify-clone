@@ -1,169 +1,765 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="icon" href="logo.png">
-    <link rel="stylesheet" href="miniproject.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
 
-    <title>Spotify-web Player:Music for evryone</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Spotify Clone</title>
+
+
+    <!-- Font Awesome -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <!-- CSS -->
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
 </head>
+
+
 <body>
-    
-    <div class="main">
-        <div class="sidebar">
-            <div class="nav">
-                <div class="nav-option " style="opacity: 1;">
-                    <i class="fa-solid fa-house"></i>
-                    <a href="#">home</a> 
-                </div>
-                <div class="nav-option">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <a href="#">search</a>
-                </div>
-            </div>
-            <div class="library">  
-                <div class="option">
-                    <div class="lib-option nav-option">
-                    <img src="library_icon.png" alt="library">
-                    <a href="#">your library</a>  
-                    </div>
-                    <div class="icons">
-                       <i class="fa-sharp fa-solid fa-arrow-right"></i>
-                        <i class="fa-regular fa-solid fa-plus"></i>
-                    </div> <br>
-                
-                </div>
-                <div class="lib-option">
-                   <div class="box">
-                     <div class="box-p1"><p>create your first playlist</p></div>
-                    <div class="box-p2">it's easy we will help you</div>
-                    <button class="badge">create playlist</button>
-                   </div>
-                   <div class="bot">
-                     <div class="box-p1"><p>let's find someone's podcast to follow</p></div>
-                    <div class="box-p2">we'll be keep updated on new episodes</div>
-                    <button class="badge">Browse podcasts</button>
-                   </div>
-                </div>
-            </div>
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="sidebar">
+
+
+        <!-- Logo -->
+
+        <div class="logo">
+
+            <i class="fa-brands fa-spotify"></i>
+
+            <span>Spotify</span>
+
         </div>
-        <div class="main-content">
-            <div class="stiky-nav">
-                <div class="stiky-nav-icons">
-             <img src="backward_icon.png" alt="background">
-             <img src="forward_icon.png" alt="forward " class="hide">   
-            </div>
-            <div class="stiky-nav-options">
-              <button class="badge hide" > explore premium</button>
-              <button class="badge_dark" ><i class="fa-solid fa-cloud-arrow-down" style="margin-right: 0.5rem;"></i>install app</button>
-              <i class="fa-regular fa-user"></i>  
-            </div>
-            </div>
-            <!-- <div class="cards"> -->
-                <h2 class="title">Recently played</h2>
-                <div class="cards-container">
-                    <div class="card">
-                        <img src="card1img.jpeg" alt="" class="card-img">
-                        <p class="card-title">Top 50-Global</p>
-                        <p class="card-info">Your daily updates of the most played tracks...</p>
-                    </div>
+
+
+        <!-- Main Menu -->
+
+        <nav class="main-menu">
+
+
+            <button
+                class="menu-item active"
+                id="homeButton"
+            >
+
+                <i class="fa-solid fa-house"></i>
+
+                <span>Home</span>
+
+            </button>
+
+
+            <button
+                class="menu-item"
+                id="searchButton"
+            >
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <span>Search</span>
+
+            </button>
+
+
+        </nav>
+
+
+        <!-- =================================================
+             LIBRARY
+        ================================================== -->
+
+        <div class="library">
+
+
+            <div class="library-title">
+
+                <div>
+
+                    <i class="fa-solid fa-book"></i>
+
+                    <span>Your Library</span>
+
                 </div>
-                <h2 class="title">Trending now near you</h2>
-                <div class="cards-container">
-                    <div class="card">
-                        <img src="card2img.jpeg" alt="" class="card-img">
-                        <p class="card-title">Top 50-Global</p>
-                        <p class="card-info">Your daily updates of the most played tracks...</p>
-                    </div>
-                
-                
-                
-                    <div class="card">
-                        <img src="card3img.jpeg" alt="" class="card-img">
-                        <p class="card-title">Top 50-Global</p>
-                        <p class="card-info">Your daily updates of the most played tracks...</p>
-                    </div>
-                
-                
-                
-                    <div class="card">
-                        <img src="card4img.jpeg" alt="" class="card-img">
-                        <p class="card-title">Top 50-Global</p>
-                        <p class="card-info">Your daily updates of the most played tracks...</p>
-                    </div>
-                    <div class="card">
-                        <img src="card3img.jpeg" alt="" class="card-img">
-                        <p class="card-title">Top 50-Global</p>
-                        <p class="card-info">Your daily updates of the most played tracks...</p>
-                    </div>
-                    <div class="card">
-                        <img src="card5img.jpeg" alt="" class="card-img">
-                        <p class="card-title">Top 50-Global</p>
-                        <p class="card-info">Your daily updates of the most played tracks...</p>
-                    </div>
-                   
-                </div>
-               <h2 class="title">Featured charts </h2>
-                <div class="cards-container">
-                    <div class="card">
-                        <img src="card6img.jpeg" alt="" class="card-img">
-                        <p class="card-title">Top songs in india</p>
-                        <p class="card-info">Your daily updates of the most played tracks...</p>
-                    </div>
-                    <!-- <h2 class="title">Recently played</h2>
-                <div class="cards-container"> -->
-                    <div class="card">
-                        <img src="card1img.jpeg" alt="" class="card-img">
-                        <p class="card-title">Top 50-Global</p>
-                        <p class="card-info">Your daily updates of the most played tracks...</p>
-                    </div>
-                
-                <!-- <h2 class="title">Recently played</h2>
-                <div class="cards-container"> -->
-                    <div class="card">
-                        <img src="card1img.jpeg" alt="" class="card-img">
-                        <p class="card-title">Top 50-Global</p>
-                        <p class="card-info">Your daily updates of the most played tracks...</p>
-                    </div>
-                
+
+
+                <button
+                    class="library-add"
+                    id="libraryAdd"
+                    title="Create playlist"
+                >
+
+                    <i class="fa-solid fa-plus"></i>
+
+                </button>
+
             </div>
 
-             <div class="footer">
-                <div class="line"></div>
-            </div>
-        </div> 
-        
-        
 
-        <div class="music-player">
-            <div class="album">
-                <img src="image copy 2.png" class="image">
-                <div class="col">
-                    <p class="find">Finding Her</p> <br>
-                    <p class="khush">khushgra,Bharat</p>
-                </div>
+            <!-- Playlist -->
+
+            <div class="library-box">
+
+                <h4>
+                    Create your first playlist
+                </h4>
+
+                <p>
+                    It's easy, we'll help you
+                </p>
+
+                <button
+                    id="createPlaylist"
+                >
+                    Create playlist
+                </button>
+
             </div>
-            <div class="player">
-                <div class="player-control">
-                    <img src="player_icon1.png" class="player-control-icon">
-                    <img src="player_icon2.png" class="player-control-icon">
-                    <img src="player_icon3.png" class="player-control-icon">
-                    <img src="player_icon4.png" class="player-control-icon">
-                    <img src="player_icon5.png" class="player-control-icon">
-                </div>
-                <div class="playback-bar">
-                    <span class="curr-time">00:00</span>
-                    <input type="range" min="00" max="100" class="progress-bar" step="1">
-                    <span class="tot-time">3:33</span>
-                </div>
+
+
+            <!-- Podcast -->
+
+            <div class="library-box">
+
+                <h4>
+                    Let's find some podcasts to follow
+                </h4>
+
+                <p>
+                    We'll keep you updated on new episodes
+                </p>
+
+                <button
+                    id="browsePodcast"
+                >
+                    Browse podcasts
+                </button>
+
             </div>
-            <div class="control-bar"></div>
+
+
         </div>
-    </div>
+
+
+        <!-- Sidebar Bottom -->
+
+        <div class="sidebar-bottom">
+
+            <span>Privacy</span>
+
+            <span>Terms</span>
+
+            <span>Cookies</span>
+
+        </div>
+
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- =================================================
+             TOP NAVIGATION
+        ================================================== -->
+
+        <header class="top-nav">
+
+
+            <div class="navigation-buttons">
+
+
+                <button
+                    id="backButton"
+                    title="Back"
+                >
+
+                    <i class="fa-solid fa-chevron-left"></i>
+
+                </button>
+
+
+                <button
+                    id="forwardButton"
+                    title="Forward"
+                >
+
+                    <i class="fa-solid fa-chevron-right"></i>
+
+                </button>
+
+
+            </div>
+
+
+            <!-- Search -->
+
+            <div
+                class="search-container"
+                id="searchContainer"
+            >
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="What do you want to play?"
+                    autocomplete="off"
+                >
+
+
+                <button
+                    id="clearSearch"
+                    title="Clear search"
+                >
+
+                    <i class="fa-solid fa-xmark"></i>
+
+                </button>
+
+            </div>
+
+
+            <!-- Account buttons -->
+
+            <div class="nav-buttons">
+
+
+                <button
+                    class="signup"
+                    id="signupButton"
+                >
+                    Sign up
+                </button>
+
+
+                <button
+                    class="login"
+                    id="loginButton"
+                >
+                    Log in
+                </button>
+
+
+            </div>
+
+
+        </header>
+
+
+
+        <!-- =================================================
+             CONTENT
+        ================================================== -->
+
+        <section class="content">
+
+
+            <h1>
+                Good Evening
+            </h1>
+
+
+            <!-- =================================================
+                 SEARCH RESULT MESSAGE
+            ================================================== -->
+
+            <div
+                class="search-heading"
+                id="searchHeading"
+            >
+
+                Search results
+
+            </div>
+
+
+            <!-- =================================================
+                 RECENTLY PLAYED
+            ================================================== -->
+
+            <section class="music-section">
+
+                <div class="section-header">
+
+                    <h2>
+                        Recently Played
+                    </h2>
+
+                </div>
+
+
+                <div class="card-container">
+
+
+                    <!-- Song 1 -->
+
+                    <div
+                        class="card"
+                        data-song-index="0"
+                    >
+
+                        <img
+                            src="image copy 2.png"
+                            alt="Finding Her"
+                        >
+
+                        <h3 class="card-title">
+                            Finding Her
+                        </h3>
+
+                        <p class="card-info">
+                            Khushgra, Bharat
+                        </p>
+
+                    </div>
+
+
+                    <!-- Song 2 -->
+
+                    <div
+                        class="card"
+                        data-song-index="1"
+                    >
+
+                        <img
+                            src="card2img.jpeg"
+                            alt="Song Two"
+                        >
+
+                        <h3 class="card-title">
+                            Song Two
+                        </h3>
+
+                        <p class="card-info">
+                            Artist Two
+                        </p>
+
+                    </div>
+
+
+                    <!-- Song 3 -->
+
+                    <div
+                        class="card"
+                        data-song-index="2"
+                    >
+
+                        <img
+                            src="card3img.jpeg"
+                            alt="Song Three"
+                        >
+
+                        <h3 class="card-title">
+                            Song Three
+                        </h3>
+
+                        <p class="card-info">
+                            Artist Three
+                        </p>
+
+                    </div>
+
+
+                    <!-- Song 4 -->
+
+                    <div
+                        class="card"
+                        data-song-index="3"
+                    >
+
+                        <img
+                            src="card4img.jpeg"
+                            alt="Song Four"
+                        >
+
+                        <h3 class="card-title">
+                            Song Four
+                        </h3>
+
+                        <p class="card-info">
+                            Artist Four
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 TRENDING SONGS
+            ================================================== -->
+
+            <section class="music-section">
+
+                <div class="section-header">
+
+                    <h2>
+                        Trending Songs
+                    </h2>
+
+                </div>
+
+
+                <div class="card-container">
+
+
+                    <!-- Song 5 -->
+
+                    <div
+                        class="card"
+                        data-song-index="4"
+                    >
+
+                        <img
+                            src="card5img.jpeg"
+                            alt="Song Five"
+                        >
+
+                        <h3 class="card-title">
+                            Song Five
+                        </h3>
+
+                        <p class="card-info">
+                            Artist Five
+                        </p>
+
+                    </div>
+
+
+                    <!-- Song 6 -->
+
+                    <div
+                        class="card"
+                        data-song-index="5"
+                    >
+
+                        <img
+                            src="card6img.jpeg"
+                            alt="Song Six"
+                        >
+
+                        <h3 class="card-title">
+                            Song Six
+                        </h3>
+
+                        <p class="card-info">
+                            Artist Six
+                        </p>
+
+                    </div>
+
+
+                    <!-- Song 7 -->
+
+                    <div
+                        class="card"
+                        data-song-index="6"
+                    >
+
+                        <img
+                            src="card7img.jpeg"
+                            alt="Song Seven"
+                        >
+
+                        <h3 class="card-title">
+                            Song Seven
+                        </h3>
+
+                        <p class="card-info">
+                            Artist Seven
+                        </p>
+
+                    </div>
+
+
+                    <!-- Song 8 -->
+
+                    <div
+                        class="card"
+                        data-song-index="7"
+                    >
+
+                        <img
+                            src="card8img.jpeg"
+                            alt="Song Eight"
+                        >
+
+                        <h3 class="card-title">
+                            Song Eight
+                        </h3>
+
+                        <p class="card-info">
+                            Artist Eight
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 NO SEARCH RESULTS
+            ================================================== -->
+
+            <div
+                class="no-results"
+                id="noResults"
+            >
+
+                <i class="fa-solid fa-music"></i>
+
+                <h2>
+                    No results found
+                </h2>
+
+                <p>
+                    Try searching for another song or artist.
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         MUSIC PLAYER
+    ====================================================== -->
+
+    <footer class="music-player">
+
+
+        <!-- =================================================
+             SONG INFORMATION
+        ================================================== -->
+
+        <div class="song-info">
+
+
+            <img
+                class="image"
+                src="image copy 2.png"
+                alt="Album"
+            >
+
+
+            <div class="song-details">
+
+                <h4 class="find">
+                    Finding Her
+                </h4>
+
+                <p class="khush">
+                    Khushgra, Bharat
+                </p>
+
+            </div>
+
+
+            <button
+                class="like-button"
+                id="likeBtn"
+                title="Like"
+            >
+
+                <i class="fa-regular fa-heart"></i>
+
+            </button>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             PLAYER CENTER
+        ================================================== -->
+
+        <div class="player-center">
+
+
+            <div class="player-buttons">
+
+
+                <button
+                    id="shuffleBtn"
+                    title="Shuffle"
+                >
+
+                    <i class="fa-solid fa-shuffle"></i>
+
+                </button>
+
+
+                <button
+                    id="previousBtn"
+                    title="Previous"
+                >
+
+                    <i class="fa-solid fa-backward-step"></i>
+
+                </button>
+
+
+                <button
+                    id="playBtn"
+                    class="play-button"
+                    title="Play"
+                >
+
+                    <i class="fa-solid fa-play"></i>
+
+                </button>
+
+
+                <button
+                    id="nextBtn"
+                    title="Next"
+                >
+
+                    <i class="fa-solid fa-forward-step"></i>
+
+                </button>
+
+
+                <button
+                    id="repeatBtn"
+                    title="Repeat"
+                >
+
+                    <i class="fa-solid fa-repeat"></i>
+
+                </button>
+
+
+            </div>
+
+
+
+            <!-- Progress -->
+
+            <div class="progress-container">
+
+
+                <span class="curr-time">
+                    0:00
+                </span>
+
+
+                <input
+                    type="range"
+                    class="progress-bar"
+                    min="0"
+                    max="100"
+                    value="0"
+                    step="0.1"
+                >
+
+
+                <span class="tot-time">
+                    0:00
+                </span>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             VOLUME
+        ================================================== -->
+
+        <div class="volume-control">
+
+
+            <button
+                id="volumeButton"
+                title="Mute"
+            >
+
+                <i
+                    id="volumeIcon"
+                    class="fa-solid fa-volume-high"
+                ></i>
+
+            </button>
+
+
+            <input
+                type="range"
+                id="volume"
+                min="0"
+                max="1"
+                step="0.01"
+                value="1"
+            >
+
+
+        </div>
+
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         AUDIO
+    ====================================================== -->
+
+    <audio id="audio"></audio>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="app.js"></script>
+
+
 </body>
+
 </html>

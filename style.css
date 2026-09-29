@@ -1,0 +1,1448 @@
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #000;
+
+    color: #fff;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   COLORS
+========================================================= */
+
+:root {
+
+    --green: #1db954;
+
+    --green-light: #1ed760;
+
+    --black: #000;
+
+    --dark: #121212;
+
+    --dark-card: #181818;
+
+    --dark-hover: #242424;
+
+    --light-text: #fff;
+
+    --gray-text: #b3b3b3;
+
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.sidebar {
+
+    position: fixed;
+
+    left: 0;
+    top: 0;
+
+    width: 240px;
+    height: calc(100vh - 90px);
+
+    background: #000;
+
+    padding: 12px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    z-index: 20;
+
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 8px 12px 22px;
+
+    font-size: 24px;
+
+    font-weight: 700;
+
+}
+
+
+.logo i {
+
+    color: var(--green);
+
+    font-size: 30px;
+
+}
+
+
+/* =========================================================
+   MAIN MENU
+========================================================= */
+
+.main-menu {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+
+}
+
+
+.menu-item {
+
+    border: none;
+
+    background: transparent;
+
+    color: var(--gray-text);
+
+    width: 100%;
+
+    padding: 14px 12px;
+
+    border-radius: 7px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    text-align: left;
+
+    transition: 0.2s ease;
+
+}
+
+
+.menu-item i {
+
+    font-size: 20px;
+
+    width: 22px;
+
+    text-align: center;
+
+}
+
+
+.menu-item:hover {
+
+    color: #fff;
+
+    background: #181818;
+
+}
+
+
+.menu-item.active {
+
+    color: #fff;
+
+    background: #1e1e1e;
+
+}
+
+
+/* =========================================================
+   LIBRARY
+========================================================= */
+
+.library {
+
+    margin-top: 20px;
+
+}
+
+
+.library-title {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    color: var(--gray-text);
+
+    padding: 8px 10px 15px;
+
+    font-weight: 700;
+
+}
+
+
+.library-title > div {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+}
+
+
+.library-add {
+
+    border: none;
+
+    background: transparent;
+
+    color: var(--gray-text);
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+}
+
+
+.library-add:hover {
+
+    color: #fff;
+
+}
+
+
+.library-box {
+
+    background: #181818;
+
+    border-radius: 8px;
+
+    padding: 18px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.library-box h4 {
+
+    font-size: 14px;
+
+    margin-bottom: 10px;
+
+    line-height: 1.4;
+
+}
+
+
+.library-box p {
+
+    color: var(--gray-text);
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+    margin-bottom: 15px;
+
+}
+
+
+.library-box button {
+
+    border: none;
+
+    background: #fff;
+
+    color: #000;
+
+    border-radius: 20px;
+
+    padding: 9px 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+}
+
+
+.library-box button:hover {
+
+    transform: scale(1.03);
+
+}
+
+
+/* =========================================================
+   SIDEBAR BOTTOM
+========================================================= */
+
+.sidebar-bottom {
+
+    margin-top: auto;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    padding: 10px;
+
+    color: #777;
+
+    font-size: 10px;
+
+}
+
+
+.sidebar-bottom span {
+
+    cursor: pointer;
+
+}
+
+
+.sidebar-bottom span:hover {
+
+    color: #aaa;
+
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.main-content {
+
+    position: fixed;
+
+    top: 0;
+
+    left: 240px;
+
+    right: 0;
+
+    bottom: 90px;
+
+    background: #121212;
+
+    overflow-y: auto;
+
+    overflow-x: hidden;
+
+}
+
+
+/* scrollbar */
+
+.main-content::-webkit-scrollbar {
+
+    width: 8px;
+
+}
+
+
+.main-content::-webkit-scrollbar-track {
+
+    background: transparent;
+
+}
+
+
+.main-content::-webkit-scrollbar-thumb {
+
+    background: #555;
+
+    border-radius: 10px;
+
+}
+
+
+.main-content::-webkit-scrollbar-thumb:hover {
+
+    background: #777;
+
+}
+
+
+/* =========================================================
+   TOP NAV
+========================================================= */
+
+.top-nav {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 10;
+
+    height: 64px;
+
+    background: #111;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 22px;
+
+    gap: 20px;
+
+}
+
+
+/* navigation */
+
+.navigation-buttons {
+
+    display: flex;
+
+    gap: 10px;
+
+}
+
+
+.navigation-buttons button {
+
+    width: 36px;
+
+    height: 36px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #050505;
+
+    color: #fff;
+
+    cursor: pointer;
+
+}
+
+
+.navigation-buttons button:hover {
+
+    background: #242424;
+
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.search-container {
+
+    width: min(360px, 45%);
+
+    height: 42px;
+
+    background: #fff;
+
+    border-radius: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 15px;
+
+    color: #222;
+
+}
+
+
+.search-container > i {
+
+    font-size: 17px;
+
+}
+
+
+.search-container input {
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    flex: 1;
+
+    padding: 0 10px;
+
+    font-size: 14px;
+
+    color: #111;
+
+}
+
+
+.search-container input::placeholder {
+
+    color: #777;
+
+}
+
+
+#clearSearch {
+
+    border: none;
+
+    background: transparent;
+
+    color: #666;
+
+    cursor: pointer;
+
+    display: none;
+
+}
+
+
+#clearSearch.show {
+
+    display: block;
+
+}
+
+
+/* =========================================================
+   NAV BUTTONS
+========================================================= */
+
+.nav-buttons {
+
+    margin-left: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+}
+
+
+.nav-buttons button {
+
+    border: none;
+
+    cursor: pointer;
+
+    font-weight: 700;
+
+}
+
+
+.signup {
+
+    background: transparent;
+
+    color: var(--gray-text);
+
+}
+
+
+.signup:hover {
+
+    color: #fff;
+
+}
+
+
+.login {
+
+    background: #fff;
+
+    color: #000;
+
+    padding: 12px 20px;
+
+    border-radius: 25px;
+
+}
+
+
+.login:hover {
+
+    transform: scale(1.03);
+
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.content {
+
+    padding: 25px 28px 45px;
+
+}
+
+
+.content h1 {
+
+    font-size: 30px;
+
+    margin-bottom: 32px;
+
+}
+
+
+.music-section {
+
+    margin-bottom: 42px;
+
+}
+
+
+.section-header {
+
+    display: flex;
+
+    align-items: center;
+
+    margin-bottom: 16px;
+
+}
+
+
+.section-header h2 {
+
+    font-size: 23px;
+
+}
+
+
+/* =========================================================
+   CARDS
+========================================================= */
+
+.card-container {
+
+    display: flex;
+
+    gap: 16px;
+
+    overflow-x: auto;
+
+    padding: 3px 3px 12px;
+
+    scroll-behavior: smooth;
+
+}
+
+
+/* Hide horizontal scrollbar */
+
+.card-container::-webkit-scrollbar {
+
+    height: 6px;
+
+}
+
+
+.card-container::-webkit-scrollbar-track {
+
+    background: transparent;
+
+}
+
+
+.card-container::-webkit-scrollbar-thumb {
+
+    background: #444;
+
+    border-radius: 10px;
+
+}
+
+
+.card {
+
+    flex: 0 0 168px;
+
+    width: 168px;
+
+    background: #181818;
+
+    padding: 12px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    border: 1px solid transparent;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        border-color 0.2s ease;
+
+}
+
+
+.card:hover {
+
+    background: #242424;
+
+    transform: translateY(-2px);
+
+}
+
+
+.card.playing {
+
+    border-color: var(--green);
+
+    background: #202020;
+
+}
+
+
+.card img {
+
+    width: 100%;
+
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+
+    border-radius: 6px;
+
+    display: block;
+
+    margin-bottom: 12px;
+
+}
+
+
+.card-title {
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    margin-bottom: 7px;
+
+}
+
+
+.card-info {
+
+    font-size: 13px;
+
+    color: var(--gray-text);
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+}
+
+
+.card.playing .card-title {
+
+    color: var(--green);
+
+}
+
+
+/* =========================================================
+   SEARCH RESULTS
+========================================================= */
+
+.search-heading {
+
+    display: none;
+
+    font-size: 23px;
+
+    font-weight: 700;
+
+    margin-bottom: 18px;
+
+}
+
+
+.search-heading.active {
+
+    display: block;
+
+}
+
+
+.no-results {
+
+    display: none;
+
+    text-align: center;
+
+    padding: 80px 20px;
+
+    color: var(--gray-text);
+
+}
+
+
+.no-results.show {
+
+    display: block;
+
+}
+
+
+.no-results i {
+
+    font-size: 45px;
+
+    margin-bottom: 18px;
+
+}
+
+
+.no-results h2 {
+
+    color: #fff;
+
+    margin-bottom: 10px;
+
+}
+
+
+/* =========================================================
+   MUSIC PLAYER
+========================================================= */
+
+.music-player {
+
+    position: fixed;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 90px;
+
+    background: #181818;
+
+    border-top: 1px solid #292929;
+
+    display: grid;
+
+    grid-template-columns: 30% 40% 30%;
+
+    align-items: center;
+
+    padding: 0 18px;
+
+    z-index: 50;
+
+}
+
+
+/* =========================================================
+   SONG INFO
+========================================================= */
+
+.song-info {
+
+    min-width: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+}
+
+
+.song-info .image {
+
+    width: 56px;
+
+    height: 56px;
+
+    object-fit: cover;
+
+    border-radius: 4px;
+
+}
+
+
+.song-details {
+
+    min-width: 0;
+
+}
+
+
+.song-details h4 {
+
+    font-size: 14px;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    margin-bottom: 5px;
+
+}
+
+
+.song-details p {
+
+    color: var(--gray-text);
+
+    font-size: 12px;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+}
+
+
+.like-button {
+
+    border: none;
+
+    background: transparent;
+
+    color: var(--gray-text);
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    margin-left: 8px;
+
+}
+
+
+.like-button:hover,
+.like-button.liked {
+
+    color: var(--green);
+
+}
+
+
+/* =========================================================
+   PLAYER CENTER
+========================================================= */
+
+.player-center {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 7px;
+
+}
+
+
+.player-buttons {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 18px;
+
+}
+
+
+.player-buttons button {
+
+    border: none;
+
+    background: transparent;
+
+    color: var(--gray-text);
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+}
+
+
+.player-buttons button:hover {
+
+    color: #fff;
+
+}
+
+
+.player-buttons button.active {
+
+    color: var(--green);
+
+}
+
+
+/* play button */
+
+.player-buttons .play-button {
+
+    width: 34px;
+
+    height: 34px;
+
+    background: #fff;
+
+    color: #000;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 14px;
+
+}
+
+
+.player-buttons .play-button:hover {
+
+    transform: scale(1.05);
+
+    color: #000;
+
+}
+
+
+/* =========================================================
+   PROGRESS
+========================================================= */
+
+.progress-container {
+
+    width: min(600px, 90%);
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+}
+
+
+.progress-container span {
+
+    color: #aaa;
+
+    font-size: 10px;
+
+    min-width: 30px;
+
+    text-align: center;
+
+}
+
+
+.progress-bar {
+
+    flex: 1;
+
+    height: 4px;
+
+    cursor: pointer;
+
+    accent-color: #fff;
+
+}
+
+
+/* =========================================================
+   VOLUME
+========================================================= */
+
+.volume-control {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 10px;
+
+}
+
+
+.volume-control button {
+
+    border: none;
+
+    background: transparent;
+
+    color: #fff;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+}
+
+
+.volume-control button:hover {
+
+    color: var(--green);
+
+}
+
+
+#volume {
+
+    width: 110px;
+
+    accent-color: #fff;
+
+    cursor: pointer;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .sidebar {
+
+        width: 210px;
+
+    }
+
+
+    .main-content {
+
+        left: 210px;
+
+    }
+
+
+    .card {
+
+        flex-basis: 155px;
+
+        width: 155px;
+
+    }
+
+
+    .music-player {
+
+        grid-template-columns: 28% 44% 28%;
+
+    }
+
+
+    #volume {
+
+        width: 80px;
+
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    body {
+
+        overflow: auto;
+
+    }
+
+
+    .sidebar {
+
+        position: fixed;
+
+        width: 100%;
+
+        height: 60px;
+
+        bottom: 90px;
+
+        top: auto;
+
+        padding: 5px 10px;
+
+        flex-direction: row;
+
+        align-items: center;
+
+        background: #090909;
+
+    }
+
+
+    .logo {
+
+        display: none;
+
+    }
+
+
+    .main-menu {
+
+        width: 100%;
+
+        flex-direction: row;
+
+        justify-content: space-around;
+
+    }
+
+
+    .menu-item {
+
+        justify-content: center;
+
+        padding: 8px;
+
+        flex-direction: column;
+
+        gap: 3px;
+
+        font-size: 10px;
+
+    }
+
+
+    .menu-item i {
+
+        font-size: 16px;
+
+    }
+
+
+    .library,
+    .sidebar-bottom {
+
+        display: none;
+
+    }
+
+
+    .main-content {
+
+        position: relative;
+
+        left: 0;
+
+        bottom: auto;
+
+        min-height: calc(100vh - 150px);
+
+        margin-bottom: 150px;
+
+    }
+
+
+    .top-nav {
+
+        height: 60px;
+
+        padding: 0 12px;
+
+        gap: 8px;
+
+    }
+
+
+    .navigation-buttons {
+
+        display: none;
+
+    }
+
+
+    .search-container {
+
+        width: 100%;
+
+        height: 38px;
+
+    }
+
+
+    .nav-buttons {
+
+        display: none;
+
+    }
+
+
+    .content {
+
+        padding: 20px 15px 35px;
+
+    }
+
+
+    .content h1 {
+
+        font-size: 25px;
+
+    }
+
+
+    .card {
+
+        flex-basis: 145px;
+
+        width: 145px;
+
+    }
+
+
+    .music-player {
+
+        height: 90px;
+
+        grid-template-columns: 1fr;
+
+        padding: 8px 12px;
+
+    }
+
+
+    .song-info {
+
+        display: none;
+
+    }
+
+
+    .player-center {
+
+        width: 100%;
+
+    }
+
+
+    .volume-control {
+
+        display: none;
+
+    }
+
+
+    .player-buttons {
+
+        gap: 22px;
+
+    }
+
+
+    .progress-container {
+
+        width: 100%;
+
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL SCREEN
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .card {
+
+        flex-basis: 135px;
+
+        width: 135px;
+
+    }
+
+
+    .section-header h2 {
+
+        font-size: 20px;
+
+    }
+
+
+    .content h1 {
+
+        font-size: 23px;
+
+    }
+
+}
